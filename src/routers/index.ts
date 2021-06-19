@@ -6,4 +6,6 @@ const router = Router();
 
 router.get('/size', size.get);
 
+router.get('/size-new', size.getSizeIlyas);
+
 export default router;

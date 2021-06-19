@@ -1,3 +1,4 @@
+import { DogBreedEnum } from './DogBreedEnum';
 import { Size } from "./size"
 import { SizeNameEnum } from "./SizeNameEnum";
 
@@ -6,18 +7,38 @@ export class SizeChart{
     
     constructor(){
         this._sizes.push(
-            new Size(21,25,14,18,15,17,SizeNameEnum.XS),
-            new Size(25.01,29,18.01,23,17.01,19,SizeNameEnum.S),
-            new Size(29.01,33,23.01,26,19.01,21,SizeNameEnum['S/M']),
-            new Size(33.01,38,26.01,30,21.01,25,SizeNameEnum.M),
-            new Size( 38.01, 43, 30.01, 34, 25.01, 27, SizeNameEnum.L),
-            new Size( 43.01, 49, 34.01, 36, 27.01, 31, SizeNameEnum.XL),
-            new Size( 49.01, 56, 36.01, 42, 31.01, 35, SizeNameEnum._2XL),
-            new Size( 56.01, 62, 42.01, 49, 35.01, 40, SizeNameEnum._3XL),
-            new Size( 62.01, 68, 49.01, 54, 40.01, 45, SizeNameEnum._4XL),
-            new Size( 68.01, 77, 54.01, 60, 45.01, 51, SizeNameEnum._5XL),
-            new Size( 77.01, 85, 60.01, 66, 51.01, 53, SizeNameEnum._6XL),
-            new Size( 85.01, 95, 66.01, 74, 53.01, 55, SizeNameEnum._7XL),)
+            new Size(18,20,33,34,38,41,SizeNameEnum.XS,[DogBreedEnum['Лавретка']],'XS34'),
+            new Size(20,22,35,36,40,42,SizeNameEnum.S,[DogBreedEnum['Лавретка']],'S36'),
+            new Size(22,24,38,40,42,48,SizeNameEnum.S,[DogBreedEnum['Лавретка']],'S40'),
+            new Size(28,30,42,46,50,54,SizeNameEnum.M,[DogBreedEnum['Уипед'], DogBreedEnum['Басенджи']],'M44'),
+            new Size(28,32,46,50,54,60,SizeNameEnum.M,[DogBreedEnum['Уипед'], DogBreedEnum['Чирнеко-дель-Этна']],'M48'),
+            new Size(32,36,50,54,52,63,SizeNameEnum.M,[DogBreedEnum['Уипед'], DogBreedEnum['Чирнеко-дель-Этна']],'M52'),
+            new Size(32,38,56,60,60,65,SizeNameEnum.M,[DogBreedEnum['Уипед'], DogBreedEnum['Чирнеко-дель-Этна']],'M58'),
+            new Size(36,38,60,64,71,74,SizeNameEnum.L,[DogBreedEnum['Грейхаунд'], DogBreedEnum['Салюки'], DogBreedEnum['Испанский гальго']],'L62'),
+            new Size(36,40,64,70,74,78,SizeNameEnum.L,[DogBreedEnum['Грейхаунд'], DogBreedEnum['Салюки'], DogBreedEnum['Испанский гальго']],'L68'),
+            new Size(36,40,70,73,78,82,SizeNameEnum.L,[DogBreedEnum['Грейхаунд'], DogBreedEnum['Салюки'], DogBreedEnum['Испанский гальго']],'L72'),
+            new Size(36,40,74,82,82,88,SizeNameEnum.XL,[DogBreedEnum['Грейхаунд'], DogBreedEnum['Салюки'], DogBreedEnum['Испанский гальго']],'XL80'),
+            new Size(40,44,82,85,80,85,SizeNameEnum.XL,[DogBreedEnum['Грейхаунд'], DogBreedEnum['Польский харт']],'XL85'),
+            new Size(40,44,85,90,80,85,SizeNameEnum.XL,[DogBreedEnum['Вольфхунд'], DogBreedEnum['Русская псовая борзая']],'XL90'),
+
+
+            new Size(38,42,30,36,48,56,SizeNameEnum.S,[DogBreedEnum['Французский бульдог'], DogBreedEnum['Мопс'], DogBreedEnum['Бостонский терьер']],'S32'),
+            new Size(42,46,34,38,56,60,SizeNameEnum.S,[DogBreedEnum['Французский бульдог'], DogBreedEnum['Мини бультерер'], DogBreedEnum['Бостонский терьер']],'S36'),
+            new Size(44,48,38,42,60,64 ,SizeNameEnum.S,[DogBreedEnum['Французский бульдог'], DogBreedEnum['Бостонский терьер']],'M40'),
+            new Size(41,42,32,46,56,62,SizeNameEnum.M,[DogBreedEnum['Бостонский терьер']],'M40'),
+            new Size(41,42,40,44,60,65,SizeNameEnum.L,[DogBreedEnum['Бультерьер'], DogBreedEnum['Питбуль (Американский стаффордширский терьер)']],'L44'),
+            new Size(49,50,44,48,68,72,SizeNameEnum.L,[DogBreedEnum['Бультерьер'], DogBreedEnum['Питбуль (Американский стаффордширский терьер)']],'L46'),
+            new Size(49,50,48,54,70,75,SizeNameEnum.L,[DogBreedEnum['Бультерьер'], DogBreedEnum['Питбуль (Американский стаффордширский терьер)']],'L50'),
+            
+            
+            new Size(27,31,31,32,41,46,SizeNameEnum.S,[DogBreedEnum['Немецкий шпиц'], DogBreedEnum['Мальтезе'], DogBreedEnum['Тойтерьер'], DogBreedEnum['Мини пудель']],'S32'),
+            new Size(29,37,35,36,42,48,SizeNameEnum.M,[DogBreedEnum['Фокстерьер'], DogBreedEnum['Цвергпинчер'], DogBreedEnum['Джек-рассел-терьер']],'M36'),
+            new Size(32,38,41,42,47,54,SizeNameEnum.L,[DogBreedEnum['Бигль'], DogBreedEnum['Сент-юсужский спаниель']],'L42'),
+            new Size(38,40,47,48,58,68,SizeNameEnum.L,[DogBreedEnum['Бигль'], DogBreedEnum['Сент-юсужский спаниель']],'L48'),
+            new Size(42,46,51,54,71,73,SizeNameEnum.XL,[DogBreedEnum['Лабрадор-ретривер'], DogBreedEnum['Родезийский риджбек'], DogBreedEnum['Далматин']],'L52'),
+            new Size(46,48,56,58,84,94,SizeNameEnum.XL,[DogBreedEnum['Немецкий боксер']],'XL56'),
+            new Size(51,58,81,86,99,114 ,SizeNameEnum.XL,[DogBreedEnum['Аргентинский дог']],'XL84'),
+            )
     }
 
     public getElement(index:number):Size|null

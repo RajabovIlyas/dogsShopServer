@@ -1,3 +1,4 @@
+import { DogBreedEnum } from './DogBreedEnum';
 import { ISize } from './size.interface';
 import { SizeNameEnum } from './SizeNameEnum';
 
@@ -8,9 +9,12 @@ export class Size implements ISize{
     L2Max!: number;
     L3Min!: number;
     L3Max!: number;
-    Name!: SizeNameEnum;
+    name!: SizeNameEnum;
+    dogBreed!:DogBreedEnum[];
+    sizeInTable!:string;
 
-    public constructor (l2Min:number, l2Max:number, l3Min:number, l3Max:number,l1Min:number, l1Max:number, name:SizeNameEnum)
+
+    public constructor (l3Min:number, l3Max:number,l1Min:number, l1Max:number, l2Min:number, l2Max:number,  name:SizeNameEnum, dogBreed:DogBreedEnum[], sizeInTable:string)
     {
         this.L1Min = l1Min;
         this.L1Max = l1Max;
@@ -18,6 +22,8 @@ export class Size implements ISize{
         this.L2Max = l2Max;
         this.L3Min = l3Min;
         this.L3Max = l3Max;
-        this.Name = name;
+        this.name = name;
+        this.sizeInTable=sizeInTable;
+        this.dogBreed=dogBreed;
     }
 }

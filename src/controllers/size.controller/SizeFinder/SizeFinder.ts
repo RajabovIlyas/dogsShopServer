@@ -1,3 +1,4 @@
+import { DogBreedEnum } from './../Sizes/DogBreedEnum';
 import { SizeNameEnum } from '../Sizes/SizeNameEnum';
 import { Size } from "../Sizes/size";
 import { SizeChart } from "../Sizes/sizeChart";
@@ -62,7 +63,7 @@ export class SizeFinder
             return -l3 * deltaL2ForSize * Math.PI / (d2 + d6 + deltaL2ForSize);
         }
 
-        public findSuitableSize(l1:number, l2:number,  l3:number,  l4:number,  l5:number, l6:number): undefined | { name: string; size: (number | null)[][]; }
+        public findSuitableSize(l1:number, l2:number,  l3:number,  l4:number,  l5:number, l6:number): undefined | { name: string;dogBreed:string[], size: (number | null)[][]; }
         {
             const l1Size:Size|null = this.getSizeForL1(l1);
             const l2Size:Size|null = this.getSizeForL2(l2);
@@ -71,13 +72,14 @@ export class SizeFinder
             if(l1Size===null||l2Size===null||l3Size===null){
                 return undefined;
             }else{
-            if (Math.max(l1Size.Name, Math.max(l2Size.Name,  l3Size.Name)) -
-                Math.min(l1Size.Name, Math.min( l2Size.Name, l3Size.Name)) > 1)
+            if (Math.max(l1Size.name, Math.max(l2Size.name,  l3Size.name)) -
+                Math.min(l1Size.name, Math.min( l2Size.name, l3Size.name)) > 1)
                 return undefined;
 
-            if (l1Size.Name == l2Size.Name && l1Size.Name == l3Size.Name)
+            if (l1Size.name == l2Size.name && l1Size.name == l3Size.name)
             {
-                return{name:SizeNameEnum[l1Size.Name],
+                return{name:SizeNameEnum[l1Size.name],
+                    dogBreed: l1Size.dogBreed.map(value=>DogBreedEnum[value]),
                     size:[
                     [l1, l1 - l1Size.L1Min, l1Size.L1Max - l1],
                     [l2, l2 - l2Size.L2Min, l2Size.L2Max - l2],
@@ -88,15 +90,16 @@ export class SizeFinder
                 ]};
             }
 
-            if (l3Size.Name > l2Size.Name)
+            if (l3Size.name > l2Size.name)
             {
                 const deltaL2ForSize = l2Size.L2Max - l2;
                 const deltaL2ForSquare = this.findDeltaL2(l2, l3, l6, l3Size.L3Min - l3);
                 if (l2 > (l2Size.L2Min + l2Size.L2Max) / 2 && deltaL2ForSize <= deltaL2ForSquare)
                 {
-                    if (l1Size.Name > l3Size.Name)
+                    if (l1Size.name > l3Size.name)
                     {
-                        return{name:SizeNameEnum[l3Size.Name],
+                        return{name:SizeNameEnum[l3Size.name],
+                            dogBreed: l3Size.dogBreed.map(value=>DogBreedEnum[value]),
                             size: [
                             [l1, null, null],
                             [l2, deltaL2ForSize, null],
@@ -110,7 +113,8 @@ export class SizeFinder
 
                     if (l1 > (l1Size.L1Min + l1Size.L1Max) / 2)
                     {
-                        return{name:SizeNameEnum[l3Size.Name],
+                        return{name:SizeNameEnum[l3Size.name],
+                            dogBreed: l3Size.dogBreed.map(value=>DogBreedEnum[value]),
                             size:[
                             [l1, l1Size.L1Max - l1, null],
                             [l2, deltaL2ForSize, null],
@@ -129,7 +133,8 @@ export class SizeFinder
             const deltaL3ForSquare = this.findDeltaL3(l2, l3, l6, -Math.min(l2 - l2Size.L2Min, l2 - l1));
             if (l3 > (l3Size.L3Min + l3Size.L3Max) / 2 && deltaL3ForSize <= deltaL3ForSquare)
             {
-               return{name:SizeNameEnum[l3Size.Name],
+               return{name:SizeNameEnum[l3Size.name],
+                dogBreed: l3Size.dogBreed.map(value=>DogBreedEnum[value]),
                 size:[
                     [l1, null, null],
                     [l2, null, null],
@@ -143,6 +148,17 @@ export class SizeFinder
 
         }
             return undefined;
+        }
 
+        public findSuitableSizeIlyas(l1:number, l2:number,  l3:number): undefined | Size
+        {
+            for (let i = 0; i <  this._chart.getLenth(); i++)
+            {
+                const size=this._chart.getElement(i);
+                if (size!==null&&(l1 >= size.L1Min && l1 <= size.L1Max)&&(l2 >= size.L2Min && l2 <= size.L2Max)&&(l3 >= size.L3Min && l3 <= size.L3Max))
+                    console.log(size);
+                    return size;
+            }
+            return undefined;
         }
     }
