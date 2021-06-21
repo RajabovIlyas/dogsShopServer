@@ -41,7 +41,7 @@ const getNewVersion=async (req: Request, res: Response) => {
   const sizeFinder=new SizeFinder();
 
   try{
-  const result= sizeFinder.findSuitableSizeIlyas(
+  const result= await sizeFinder.findSuitableSizeNewVersion(
     Number.parseFloat(l1.toString()),
     Number.parseFloat(l2.toString()),
     Number.parseFloat(l3.toString()),);

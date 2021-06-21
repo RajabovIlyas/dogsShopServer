@@ -150,14 +150,14 @@ export class SizeFinder
             return undefined;
         }
 
-        public findSuitableSizeIlyas(l1:number, l2:number,  l3:number): null | Size
+        public findSuitableSizeNewVersion(l1:number, l2:number,  l3:number): null | Size
         {
             for (let i = 0; i <  this._chart.getLenth(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l1 >= size.L1Min && l1 <= size.L1Max)&&(l2 >= size.L2Min && l2 <= size.L2Max)&&(l3 >= size.L3Min && l3 <= size.L3Max))
-                    console.log(size);
+                if (size!==null&&(l1 >= size.L1Min && l1 <= size.L1Max)&&(l2 >= size.L2Min && l2 <= size.L2Max)&&(l3 >= size.L3Min && l3 <= size.L3Max)){
                     return size;
+                }
             }
             return null;
         }
