@@ -32,7 +32,7 @@ const get=async (req: Request, res: Response) => {
   }
 };
 
-const getSizeIlyas=async (req: Request, res: Response) => {
+const getNewVersion=async (req: Request, res: Response) => {
   const {l1,l2,l3}=req.query;
   if(!l1||!l2||!l3){
     return res.status(404).json({message:'Не все параметры были найдены'});
@@ -46,7 +46,7 @@ const getSizeIlyas=async (req: Request, res: Response) => {
     Number.parseFloat(l2.toString()),
     Number.parseFloat(l3.toString()),);
 
-    if(result!==undefined){
+    if(result!==null){
       res.status(200).json({...result, dogBreed: result.dogBreed.map(value=>DogBreedEnum[value]),name:SizeNameEnum[result.name]});
     }else{
       res.status(410).json({message:'Размер не определился'});
@@ -59,5 +59,5 @@ const getSizeIlyas=async (req: Request, res: Response) => {
 
 export default {
   get,
-  getSizeIlyas,
+  getNewVersion,
 };

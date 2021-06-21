@@ -150,7 +150,7 @@ export class SizeFinder
             return undefined;
         }
 
-        public findSuitableSizeIlyas(l1:number, l2:number,  l3:number): undefined | Size
+        public findSuitableSizeIlyas(l1:number, l2:number,  l3:number): null | Size
         {
             for (let i = 0; i <  this._chart.getLenth(); i++)
             {
@@ -159,6 +159,6 @@ export class SizeFinder
                     console.log(size);
                     return size;
             }
-            return undefined;
+            return null;
         }
     }
