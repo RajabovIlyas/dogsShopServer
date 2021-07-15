@@ -12,36 +12,36 @@ export class SizeFinder
             this._chart = new SizeChart();
         }
 
-        private getSizeForL1(l1:number): Size|null
+        private getSizeForL1(l1:number, dogBreed:number): Size|null
         {
-            for (let i = 0; i < this._chart.getLenth(); i++)
+            for (let i = 0; i < this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l1 >= size.L1Min && l1 < size.L1Max))
+                if (size!==null&&(l1 >= size.L1Min && l1 < size.L1Max)&& size.dogBreed.some((value => value===dogBreed)))
                     return size;
             }
 
             return null;
         }
 
-        private  getSizeForL2(l2:number):Size|null
+        private  getSizeForL2(l2:number, dogBreed:number):Size|null
         {
-            for (let i = 0; i <  this._chart.getLenth(); i++)
+            for (let i = 0; i <  this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l2 >= size.L2Min && l2 < size.L2Max))
+                if (size!==null&&(l2 >= size.L2Min && l2 < size.L2Max)&& size.dogBreed.some((value => value===dogBreed)))
                     return size;
             }
 
             return null;
         }
 
-        private getSizeForL3(l3:number):Size|null
+        private getSizeForL3(l3:number, dogBreed:number):Size|null
         {
-            for (let i = 0; i <  this._chart.getLenth(); i++)
+            for (let i = 0; i <  this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l3 >=size.L3Min && l3 < size.L3Max))
+                if (size!==null&&(l3 >=size.L3Min && l3 < size.L3Max)&& size.dogBreed.some((value => value===dogBreed)))
                     return size;
             }
 
@@ -63,11 +63,11 @@ export class SizeFinder
             return -l3 * deltaL2ForSize * Math.PI / (d2 + d6 + deltaL2ForSize);
         }
 
-        public findSuitableSize(l1:number, l2:number,  l3:number,  l4:number,  l5:number, l6:number): undefined | { name: string;dogBreed:string[], size: (number | null)[][]; }
+        public findSuitableSize(l1:number, l2:number,  l3:number,  l4:number,  l5:number, l6:number, dogBreed:number): undefined | { name: string;dogBreed:string[], size: (number | null)[][]; }
         {
-            const l1Size:Size|null = this.getSizeForL1(l1);
-            const l2Size:Size|null = this.getSizeForL2(l2);
-            const l3Size: Size|null = this.getSizeForL3(l3);
+            const l1Size:Size|null = this.getSizeForL1(l1,dogBreed);
+            const l2Size:Size|null = this.getSizeForL2(l2, dogBreed);
+            const l3Size: Size|null = this.getSizeForL3(l3, dogBreed);
 
             if(l1Size===null||l2Size===null||l3Size===null){
                 return undefined;
@@ -144,21 +144,11 @@ export class SizeFinder
                     [l6, null, null]
                ]};
             }
-            
+
 
         }
             return undefined;
         }
 
-        public findSuitableSizeNewVersion(l1:number, l2:number,  l3:number): null | Size
-        {
-            for (let i = 0; i <  this._chart.getLenth(); i++)
-            {
-                const size=this._chart.getElement(i);
-                if (size!==null&&(l1 >= size.L1Min && l1 <= size.L1Max)&&(l2 >= size.L2Min && l2 <= size.L2Max)&&(l3 >= size.L3Min && l3 <= size.L3Max)){
-                    return size;
-                }
-            }
-            return null;
-        }
+
     }

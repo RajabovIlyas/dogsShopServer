@@ -6,6 +6,6 @@ const router = Router();
 
 router.get('/size', size.get);
 
-router.get('/size-new', size.getNewVersion);
+router.get('/dog-breed', size.getDogBreed)
 
 export default router;
