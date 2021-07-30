@@ -51,3 +51,19 @@ export default {
     get,
     getDogBreed,
 };
+
+const showMail=async ()=>{
+    const sizeFinder = new SizeFinder();
+    const _chart=await sizeFinder.showJson();
+    // for (let i = 0; i <  _chart.getLength(); i++)
+    // {
+    //     const size=_chart.getElement(i);
+    //     // @ts-ignore
+    //     size.dogBreed.map(value=>{
+    //         console.log({...size, dogBreed:value})
+    //     })
+    // }
+}
+
+
+showMail();

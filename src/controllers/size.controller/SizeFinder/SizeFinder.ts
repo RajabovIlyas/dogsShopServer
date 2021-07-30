@@ -12,12 +12,16 @@ export class SizeFinder
             this._chart = new SizeChart();
         }
 
+        showJson(){
+            return this._chart
+        }
+
         private getSizeForL1(l1:number, dogBreed:number): Size|null
         {
             for (let i = 0; i < this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l1 >= size.L1Min && l1 < size.L1Max)&& size.dogBreed.some((value => value===dogBreed)))
+                if (size!==null&&(l1 >= size.L1Min && l1 < size.L1Max)&& size.dogBreed===dogBreed)
                     return size;
             }
 
@@ -29,7 +33,7 @@ export class SizeFinder
             for (let i = 0; i <  this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l2 >= size.L2Min && l2 < size.L2Max)&& size.dogBreed.some((value => value===dogBreed)))
+                if (size!==null&&(l2 >= size.L2Min && l2 < size.L2Max)&& size.dogBreed===dogBreed)
                     return size;
             }
 
@@ -41,7 +45,7 @@ export class SizeFinder
             for (let i = 0; i <  this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l3 >=size.L3Min && l3 < size.L3Max)&& size.dogBreed.some((value => value===dogBreed)))
+                if (size!==null&&(l3 >=size.L3Min && l3 < size.L3Max)&& size.dogBreed===dogBreed)
                     return size;
             }
 
@@ -63,8 +67,7 @@ export class SizeFinder
             return -l3 * deltaL2ForSize * Math.PI / (d2 + d6 + deltaL2ForSize);
         }
 
-        public findSuitableSize(l1:number, l2:number,  l3:number,  l4:number,  l5:number, l6:number, dogBreed:number): undefined | { name: string;dogBreed:string[], size: (number | null)[][]; }
-        {
+        public findSuitableSize(l1:number, l2:number,  l3:number,  l4:number,  l5:number, l6:number, dogBreed:number): { size: (number | null)[][]; name: string; dogBreed: DogBreedEnum } | undefined{
             const l1Size:Size|null = this.getSizeForL1(l1,dogBreed);
             const l2Size:Size|null = this.getSizeForL2(l2, dogBreed);
             const l3Size: Size|null = this.getSizeForL3(l3, dogBreed);
@@ -79,7 +82,7 @@ export class SizeFinder
             if (l1Size.name == l2Size.name && l1Size.name == l3Size.name)
             {
                 return{name:SizeNameEnum[l1Size.name],
-                    dogBreed: l1Size.dogBreed.map(value=>DogBreedEnum[value]),
+                    dogBreed: l1Size.dogBreed,
                     size:[
                     [l1, l1 - l1Size.L1Min, l1Size.L1Max - l1],
                     [l2, l2 - l2Size.L2Min, l2Size.L2Max - l2],
@@ -99,7 +102,7 @@ export class SizeFinder
                     if (l1Size.name > l3Size.name)
                     {
                         return{name:SizeNameEnum[l3Size.name],
-                            dogBreed: l3Size.dogBreed.map(value=>DogBreedEnum[value]),
+                            dogBreed: l3Size.dogBreed,
                             size: [
                             [l1, null, null],
                             [l2, deltaL2ForSize, null],
@@ -114,7 +117,7 @@ export class SizeFinder
                     if (l1 > (l1Size.L1Min + l1Size.L1Max) / 2)
                     {
                         return{name:SizeNameEnum[l3Size.name],
-                            dogBreed: l3Size.dogBreed.map(value=>DogBreedEnum[value]),
+                            dogBreed: l3Size.dogBreed,
                             size:[
                             [l1, l1Size.L1Max - l1, null],
                             [l2, deltaL2ForSize, null],
@@ -134,7 +137,7 @@ export class SizeFinder
             if (l3 > (l3Size.L3Min + l3Size.L3Max) / 2 && deltaL3ForSize <= deltaL3ForSquare)
             {
                return{name:SizeNameEnum[l3Size.name],
-                dogBreed: l3Size.dogBreed.map(value=>DogBreedEnum[value]),
+                dogBreed: l3Size.dogBreed,
                 size:[
                     [l1, null, null],
                     [l2, null, null],

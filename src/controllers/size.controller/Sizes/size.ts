@@ -10,20 +10,20 @@ export class Size implements ISize{
     L3Min!: number;
     L3Max!: number;
     name!: SizeNameEnum;
-    dogBreed!:DogBreedEnum[];
+    dogBreed!:DogBreedEnum;
     sizeInTable!:string;
 
 
-    public constructor (l3Min:number, l3Max:number,l1Min:number, l1Max:number, l2Min:number, l2Max:number,  name:SizeNameEnum, dogBreed:DogBreedEnum[], sizeInTable:string)
+    public constructor (data:ISize)
     {
-        this.L1Min = l1Min;
-        this.L1Max = l1Max;
-        this.L2Min = l2Min;
-        this.L2Max = l2Max;
-        this.L3Min = l3Min;
-        this.L3Max = l3Max;
-        this.name = name;
-        this.sizeInTable=sizeInTable;
-        this.dogBreed=dogBreed;
+        this.L1Min = data.L1Min;
+        this.L1Max = data.L1Max;
+        this.L2Min = data.L1Min;
+        this.L2Max = data.L1Max;
+        this.L3Min = data.L1Min;
+        this.L3Max = data.L1Max;
+        this.name = data.name;
+        this.sizeInTable=data.sizeInTable;
+        this.dogBreed=data.dogBreed;
     }
 }
