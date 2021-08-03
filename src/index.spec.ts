@@ -13,9 +13,6 @@ describe("server checks", async function () {
     const myData=JSON.parse(data);
     let i=0;
     await myData.sizes.forEach((value: ISize)=> {
-        if(value.dogBreed===0){
-            return;
-        }
         for(let q=value.L1Min;q<=value.L1Max;q++){
             for(let w=value.L2Min;w<=value.L2Max;w++){
                 for(let e=value.L3Min;e<=value.L3Max;e++){

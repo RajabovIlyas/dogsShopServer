@@ -122,6 +122,28 @@
       "dogBreed": 0
     },
     {
+      "L1Min": 18,
+      "L1Max": 20,
+      "L2Min": 38,
+      "L2Max": 41,
+      "L3Min": 34,
+      "L3Max": 36,
+      "name": 1,
+      "sizeInTable": "XS34",
+      "dogBreed": 1
+    },
+    {
+      "L1Min": 20,
+      "L1Max": 22,
+      "L2Min": 40,
+      "L2Max": 42,
+      "L3Min": 36,
+      "L3Max": 38,
+      "name": 1,
+      "sizeInTable": "S36",
+      "dogBreed": 1
+    },
+    {
       "L1Min": 22,
       "L1Max": 24,
       "L2Min": 42,
