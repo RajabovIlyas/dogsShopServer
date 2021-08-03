@@ -57,7 +57,8 @@ export class SizeFinder {
         return -l3 * deltaL2ForSize * Math.PI / (d2 + d6 + deltaL2ForSize);
     }
 
-    public findSuitableSize(l1: number, l2: number, l3: number, l4: number, l5: number, l6: number, dogBreed: number): { size: (number | null)[][]; name: string; dogBreed: DogBreedEnum } | undefined {
+    public findSuitableSize(l1: number, l2: number, l3: number, l4: number, l5: number, l6: number, dogBreed: number):
+        { size: (number[] | (number | null)[])[]; name: string; dogBreed: string; sizeInTable:string } | undefined {
         const l1Size: Size | null = this.getSizeForL1(l1, dogBreed);
         const l2Size: Size | null = this.getSizeForL2(l2, dogBreed);
         const l3Size: Size | null = this.getSizeForL3(l3, dogBreed);
@@ -72,7 +73,8 @@ export class SizeFinder {
             if (l1Size.name == l2Size.name && l1Size.name == l3Size.name) {
                 return {
                     name: SizeNameEnum[l1Size.name],
-                    dogBreed: l1Size.dogBreed,
+                    dogBreed: DogBreedEnum[l1Size.dogBreed],
+                    sizeInTable: l1Size.sizeInTable,
                     size: [
                         [l1, l1 - l1Size.L1Min, l1Size.L1Max - l1],
                         [l2, l2 - l2Size.L2Min, l2Size.L2Max - l2],
@@ -91,7 +93,8 @@ export class SizeFinder {
                     if (l1Size.name > l3Size.name) {
                         return {
                             name: SizeNameEnum[l3Size.name],
-                            dogBreed: l3Size.dogBreed,
+                            dogBreed: DogBreedEnum[l3Size.dogBreed],
+                            sizeInTable: l3Size.sizeInTable,
                             size: [
                                 [l1, null, null],
                                 [l2, deltaL2ForSize, null],
@@ -106,8 +109,9 @@ export class SizeFinder {
 
                     if (l1 > (l1Size.L1Min + l1Size.L1Max) / 2) {
                         return {
-                            name: SizeNameEnum[l3Size.name],
-                            dogBreed: l3Size.dogBreed,
+                            name: SizeNameEnum[l1Size.name],
+                            dogBreed: DogBreedEnum[l1Size.dogBreed],
+                            sizeInTable: l1Size.sizeInTable,
                             size: [
                                 [l1, l1Size.L1Max - l1, null],
                                 [l2, deltaL2ForSize, null],
@@ -128,7 +132,8 @@ export class SizeFinder {
             if (l3 > (l3Size.L3Min + l3Size.L3Max) / 2 && deltaL3ForSize <= deltaL3ForSquare) {
                 return {
                     name: SizeNameEnum[l3Size.name],
-                    dogBreed: l3Size.dogBreed,
+                    dogBreed: DogBreedEnum[l3Size.dogBreed],
+                    sizeInTable: l3Size.sizeInTable,
                     size: [
                         [l1, null, null],
                         [l2, null, null],
@@ -152,7 +157,12 @@ export class SizeFinder {
                 && (l2 >= size.L2Min && l2 <= size.L2Max)
                 && (l3 >= size.L3Min && l3 <= size.L3Max)
                 && size.dogBreed === dogBreed) {
-                return size;
+                return {
+                    name: SizeNameEnum[size.name],
+                    dogBreed: DogBreedEnum[size.dogBreed],
+                    sizeInTable: size.sizeInTable,
+                    size: [],
+                };
             }
         }
         return undefined;
