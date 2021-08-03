@@ -6,33 +6,52 @@ import {SizeNameEnum} from './Sizes/SizeNameEnum';
 
 const get = async (req: Request, res: Response) => {
     const {l1, l2, l3, l4, l5, l6, dogBreed} = req.query;
-    if (!l1 || !l2 || !l3 || !l4 || !l5 || !l6 ||!dogBreed) {
-        return res.status(404).json({message: 'Не все параметры были найдены'});
-    }
-
-
-
     const sizeFinder = new SizeFinder();
-
-    try {
-        const result = sizeFinder.findSuitableSize(
-            Number.parseFloat(l1.toString()),
-            Number.parseFloat(l2.toString()),
-            Number.parseFloat(l3.toString()),
-            Number.parseFloat(l4.toString()),
-            Number.parseFloat(l5.toString()),
-            Number.parseFloat(l6.toString()),
-            Number.parseInt(dogBreed.toString()));
-
-        if (result !== undefined) {
-            res.status(200).json(result);
-        } else {
-            res.status(410).json({message: 'Размер не определился'});
+    if (dogBreed==='0') {
+        if (!l1 || !l2 || !l3 || !l4 || !l5 || !l6 || !dogBreed) {
+            return res.status(404).json({message: 'Не все параметры были найдены'});
         }
-    } catch (e) {
-        console.log('erorr', e)
-        res.status(409).json({message: 'Не корректно введены значения'});
+        try {
+            const result = sizeFinder.findSuitableSize(
+                Number.parseFloat(l1.toString()),
+                Number.parseFloat(l2.toString()),
+                Number.parseFloat(l3.toString()),
+                Number.parseFloat(l4.toString()),
+                Number.parseFloat(l5.toString()),
+                Number.parseFloat(l6.toString()),
+                Number.parseInt(dogBreed.toString()));
+
+            if (result !== undefined) {
+                res.status(200).json(result);
+            } else {
+                res.status(410).json({message: 'Размер не определился'});
+            }
+        } catch (e) {
+            console.log('erorr', e)
+            res.status(409).json({message: 'Не корректно введены значения'});
+        }
+    }else{
+        if (!l1 || !l2 || !l3 || !dogBreed) {
+            return res.status(404).json({message: 'Не все параметры были найдены'});
+        }
+        try {
+            const result = sizeFinder.findByBreed(
+                Number.parseFloat(l1.toString()),
+                Number.parseFloat(l2.toString()),
+                Number.parseFloat(l3.toString()),
+                Number.parseInt(dogBreed.toString()));
+
+            if (result !== undefined) {
+                res.status(200).json(result);
+            } else {
+                res.status(410).json({message: 'Размер не определился'});
+            }
+        } catch (e) {
+            console.log('erorr', e)
+            res.status(409).json({message: 'Не корректно введены значения'});
+        }
     }
+
 };
 
 const getDogBreed = async (req: Request, res: Response) => {
