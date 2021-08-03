@@ -21,7 +21,7 @@ export class SizeFinder
             for (let i = 0; i < this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l1 >= size.L1Min && l1 < size.L1Max)&& size.dogBreed===dogBreed)
+                if (size!==null&&(l1 >= size.L1Min && l1 <= size.L1Max)&& size.dogBreed===dogBreed)
                     return size;
             }
 
@@ -33,7 +33,7 @@ export class SizeFinder
             for (let i = 0; i <  this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l2 >= size.L2Min && l2 < size.L2Max)&& size.dogBreed===dogBreed)
+                if (size!==null&&(l2 >= size.L2Min && l2 <= size.L2Max)&& size.dogBreed===dogBreed)
                     return size;
             }
 
@@ -45,7 +45,7 @@ export class SizeFinder
             for (let i = 0; i <  this._chart.getLength(); i++)
             {
                 const size=this._chart.getElement(i);
-                if (size!==null&&(l3 >=size.L3Min && l3 < size.L3Max)&& size.dogBreed===dogBreed)
+                if (size!==null&&(l3 >=size.L3Min && l3 <= size.L3Max)&& size.dogBreed===dogBreed)
                     return size;
             }
 

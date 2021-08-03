@@ -11,9 +11,11 @@ customizationExpress(app);
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello, World!');
   });
-  
+
   app.use('/api', createRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server started: http://localhost:${PORT}`);
   });
+
+export default app
