@@ -2,6 +2,7 @@ import {DogBreedEnum} from './Sizes/DogBreedEnum';
 import {Request, Response} from 'express';
 import {SizeFinder} from './SizeFinder/SizeFinder';
 import {SizeNameEnum} from './Sizes/SizeNameEnum';
+import {KindOfDogEnum} from "./Sizes/KindOfDogEnum";
 
 
 const get = async (req: Request, res: Response) => {
@@ -54,15 +55,40 @@ const get = async (req: Request, res: Response) => {
 
 };
 
+interface IDogBreed{
+    readonly value: string;
+    readonly key: string;
+    readonly breeds: {
+        value: string;
+        key: string;
+    }[]
+}
+
 const getDogBreed = async (req: Request, res: Response) => {
-    const DogBreed = []
-    for (const enumMember in DogBreedEnum) {
+    const dogBreed:IDogBreed[] = [];
+    for(const enumMember in KindOfDogEnum){
         const isValueProperty = parseInt(enumMember, 10) >= 0
         if (isValueProperty) {
-            DogBreed.push({value: DogBreedEnum[enumMember], key:enumMember});
+            dogBreed.push({value: KindOfDogEnum[enumMember], key:enumMember, breeds: []});
         }
     }
-    res.status(200).json(DogBreed);
+    console.log('dogBreed', dogBreed)
+    for(let i=0;i<dogBreed.length;i++) {
+        for (const enumMember in DogBreedEnum) {
+            const isValueProperty = parseInt(enumMember, 10) >= 0
+            if (isValueProperty) {
+                if(enumMember==='0'){
+                    dogBreed[2].breeds.push({value: DogBreedEnum[enumMember], key: enumMember});
+                }else {
+                    dogBreed[i].breeds.push({value: DogBreedEnum[enumMember], key: enumMember});
+                }
+            }
+            if(parseInt(enumMember)===10|| parseInt(enumMember)===16){
+                i++;
+            }
+        }
+    }
+    res.status(200).json(dogBreed);
 }
 
 
@@ -71,18 +97,3 @@ export default {
     getDogBreed,
 };
 
-const showMail=async ()=>{
-    const sizeFinder = new SizeFinder();
-    const _chart=await sizeFinder.showJson();
-    // for (let i = 0; i <  _chart.getLength(); i++)
-    // {
-    //     const size=_chart.getElement(i);
-    //     // @ts-ignore
-    //     size.dogBreed.map(value=>{
-    //         console.log({...size, dogBreed:value})
-    //     })
-    // }
-}
-
-
-showMail();
