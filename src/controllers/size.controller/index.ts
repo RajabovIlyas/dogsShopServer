@@ -36,7 +36,7 @@ const get = async (req: Request, res: Response) => {
             return res.status(404).json({message: 'Не все параметры были найдены'});
         }
         try {
-            const result = sizeFinder.findByBreed(
+            const result = sizeFinder.findByBreedNewVersion(
                 Number.parseFloat(l1.toString()),
                 Number.parseFloat(l2.toString()),
                 Number.parseFloat(l3.toString()),
