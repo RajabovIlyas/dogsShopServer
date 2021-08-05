@@ -172,18 +172,7 @@ export class SizeFinder {
         const l1Size: Size | null = this.getSizeForL1(l1, dogBreed);
         const l2Size: Size | null = this.getSizeForL2(l2, dogBreed);
         const l3Size: Size | null = this.getSizeForL3(l3, dogBreed);
-        if (l1Size === null || l2Size === null || l3Size === null) {
-            return undefined;
-        }
-        if(!(l2Size.name>l1Size.name+1&&l1Size.name-1>l3Size.name)||!(l2Size.name<l1Size.name-1&&l1Size.name+1<l3Size.name)){
-            return {
-                name: SizeNameEnum[l1Size.name],
-                dogBreed: DogBreedEnum[l1Size.dogBreed],
-                sizeInTable: l1Size.sizeInTable,
-                size: [],
-            };
-        }
-        if(!(l1Size.name>l2Size.name+1&&l2Size.name-1>l3Size.name)||!(l1Size.name<l2Size.name-1&&l2Size.name+1<l3Size.name)){
+        if(l1Size === null && l2Size && l3Size && l2Size.name===l3Size.name){
             return {
                 name: SizeNameEnum[l2Size.name],
                 dogBreed: DogBreedEnum[l2Size.dogBreed],
@@ -191,13 +180,47 @@ export class SizeFinder {
                 size: [],
             };
         }
-        if(!(l1Size.name>l3Size.name+1&&l3Size.name-1>l2Size.name)||!(l1Size.name<l3Size.name-1&&l3Size.name+1<l2Size.name)){
+        if(l2Size === null && l1Size && l3Size && l1Size.name===l3Size.name){
             return {
-                name: SizeNameEnum[l3Size.name],
-                dogBreed: DogBreedEnum[l3Size.dogBreed],
-                sizeInTable: l3Size.sizeInTable,
+                name: SizeNameEnum[l1Size.name],
+                dogBreed: DogBreedEnum[l1Size.dogBreed],
+                sizeInTable: l1Size.sizeInTable,
                 size: [],
             };
+        }
+        if(l3Size === null && l2Size && l1Size && l1Size.name===l2Size.name){
+            return {
+                name: SizeNameEnum[l1Size.name],
+                dogBreed: DogBreedEnum[l1Size.dogBreed],
+                sizeInTable: l1Size.sizeInTable,
+                size: [],
+            };
+        }
+        if(l3Size !== null && l2Size !== null && l1Size !== null) {
+            if (!(l2Size.name > l1Size.name + 1 && l1Size.name - 1 > l3Size.name) || !(l2Size.name < l1Size.name - 1 && l1Size.name + 1 < l3Size.name)) {
+                return {
+                    name: SizeNameEnum[l1Size.name],
+                    dogBreed: DogBreedEnum[l1Size.dogBreed],
+                    sizeInTable: l1Size.sizeInTable,
+                    size: [],
+                };
+            }
+            if (!(l1Size.name > l2Size.name + 1 && l2Size.name - 1 > l3Size.name) || !(l1Size.name < l2Size.name - 1 && l2Size.name + 1 < l3Size.name)) {
+                return {
+                    name: SizeNameEnum[l2Size.name],
+                    dogBreed: DogBreedEnum[l2Size.dogBreed],
+                    sizeInTable: l2Size.sizeInTable,
+                    size: [],
+                };
+            }
+            if (!(l1Size.name > l3Size.name + 1 && l3Size.name - 1 > l2Size.name) || !(l1Size.name < l3Size.name - 1 && l3Size.name + 1 < l2Size.name)) {
+                return {
+                    name: SizeNameEnum[l3Size.name],
+                    dogBreed: DogBreedEnum[l3Size.dogBreed],
+                    sizeInTable: l3Size.sizeInTable,
+                    size: [],
+                };
+            }
         }
         return undefined;
     }
