@@ -168,10 +168,16 @@ export class SizeFinder {
         return undefined;
     }
 
-    public findByBreedNewVersion(l1:number, l2: number, l3: number, dogBreed: number){
-        const l1Size: Size | null = this.getSizeForL1(l1, dogBreed);
-        const l2Size: Size | null = this.getSizeForL2(l2, dogBreed);
-        const l3Size: Size | null = this.getSizeForL3(l3, dogBreed);
+    private getSizeForL3NoBreed(l3: number): Size | null {
+        for (let i = 0; i < this._chart.getLength(); i++) {
+            const size = this._chart.getElement(i);
+            if (size !== null && (l3 >= size.L3Min && l3 <= size.L3Max) && size.dogBreed!==0)
+                return size;
+        }
+        return null;
+    }
+
+    async algorithmFindSize(l1Size: Size|null, l2Size: Size|null, l3Size: Size|null){
         if(l1Size === null && l2Size && l3Size && l2Size.name===l3Size.name){
             return {
                 name: SizeNameEnum[l2Size.name],
@@ -196,6 +202,7 @@ export class SizeFinder {
                 size: [],
             };
         }
+
         if(l3Size !== null && l2Size !== null && l1Size !== null) {
             if (!(l2Size.name > l1Size.name + 1 && l1Size.name - 1 > l3Size.name) || !(l2Size.name < l1Size.name - 1 && l1Size.name + 1 < l3Size.name)) {
                 return {
@@ -222,6 +229,40 @@ export class SizeFinder {
                 };
             }
         }
+        if(l3Size!==null && (l3Size.dogBreed>0&& l3Size.dogBreed<11)){
+            return {
+                name: SizeNameEnum[l3Size.name],
+                dogBreed: DogBreedEnum[l3Size.dogBreed],
+                sizeInTable: l3Size.sizeInTable,
+                size: [],
+            };
+        }
         return undefined;
+    }
+
+    public async findByNoBreed(l1:number, l2: number, l3: number){
+        const l3Size: Size | null = this.getSizeForL3NoBreed(l3);
+        if(l3Size!==null) {
+            const l1Size: Size | null = this.getSizeForL1(l1, l3Size.dogBreed);
+            const l2Size: Size | null = this.getSizeForL2(l2, l3Size.dogBreed);
+            const result = await this.algorithmFindSize(l1Size,l2Size,l3Size);
+            if(result!==undefined){
+                return result
+            }
+        }
+        return undefined
+    }
+
+    public async findByBreedNewVersion(l1:number, l2: number, l3: number, dogBreed: number){
+        const l1Size: Size | null = this.getSizeForL1(l1, dogBreed);
+        const l2Size: Size | null = this.getSizeForL2(l2, dogBreed);
+        const l3Size: Size | null = this.getSizeForL3(l3, dogBreed);
+        const result = await this.algorithmFindSize(l1Size,l2Size,l3Size);
+        console.log('result', result);
+        if(result!==undefined){
+            return result
+        }
+
+        return this.findByNoBreed(l1,l2,l3);
     }
 }

@@ -13,7 +13,7 @@ const get = async (req: Request, res: Response) => {
             return res.status(404).json({message: 'Не все параметры были найдены'});
         }
         try {
-            const result = sizeFinder.findSuitableSize(
+            const result = await sizeFinder.findSuitableSize(
                 Number.parseFloat(l1.toString()),
                 Number.parseFloat(l2.toString()),
                 Number.parseFloat(l3.toString()),
@@ -21,7 +21,6 @@ const get = async (req: Request, res: Response) => {
                 Number.parseFloat(l5.toString()),
                 Number.parseFloat(l6.toString()),
                 Number.parseInt(dogBreed.toString()));
-
             if (result !== undefined) {
                 res.status(200).json(result);
             } else {
@@ -36,7 +35,7 @@ const get = async (req: Request, res: Response) => {
             return res.status(404).json({message: 'Не все параметры были найдены'});
         }
         try {
-            const result = sizeFinder.findByBreedNewVersion(
+            const result = await sizeFinder.findByBreedNewVersion(
                 Number.parseFloat(l1.toString()),
                 Number.parseFloat(l2.toString()),
                 Number.parseFloat(l3.toString()),
