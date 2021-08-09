@@ -42,7 +42,7 @@ const get = async (req: Request, res: Response) => {
                 Number.parseInt(dogBreed.toString()));
 
             if (result !== undefined) {
-                res.status(200).json(result);
+                res.status(result.status).json(result);
             } else {
                 res.status(410).json({message: 'Размер не определился'});
             }

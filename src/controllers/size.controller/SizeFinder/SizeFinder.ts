@@ -247,7 +247,7 @@ export class SizeFinder {
             const l2Size: Size | null = this.getSizeForL2(l2, l3Size.dogBreed);
             const result = await this.algorithmFindSize(l1Size,l2Size,l3Size);
             if(result!==undefined){
-                return result
+                return {...result, status:222}
             }
         }
         return undefined
@@ -260,7 +260,7 @@ export class SizeFinder {
         const result = await this.algorithmFindSize(l1Size,l2Size,l3Size);
         console.log('result', result);
         if(result!==undefined){
-            return result
+            return {...result, status: 200}
         }
 
         return this.findByNoBreed(l1,l2,l3);
