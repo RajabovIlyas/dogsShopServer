@@ -1176,6 +1176,17 @@
       "name": 14,
       "sizeInTable": "M",
       "dogBreed": 48
+    },
+    {
+      "L1Min": 18,
+      "L1Max": 20,
+      "L2Min": 45,
+      "L2Max": 50,
+      "L3Min": 35,
+      "L3Max": 40,
+      "name": 14,
+      "sizeInTable": "M",
+      "dogBreed": 45
     }
   ]
 }
