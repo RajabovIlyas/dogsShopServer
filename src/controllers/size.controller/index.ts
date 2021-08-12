@@ -82,7 +82,7 @@ const getDogBreed = async (req: Request, res: Response) => {
                     dogBreed[i].breeds.push({value: DogBreedEnum[enumMember], key: enumMember});
                 }
             }
-            if(parseInt(enumMember)===10|| parseInt(enumMember)===16){
+            if(parseInt(enumMember)===15|| parseInt(enumMember)===23){
                 i++;
             }
         }

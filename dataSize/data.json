@@ -199,6 +199,17 @@
       "dogBreed": 4
     },
     {
+      "L1Min": 28,
+      "L1Max": 32,
+      "L2Min": 52,
+      "L2Max": 60,
+      "L3Min": 46,
+      "L3Max": 50,
+      "name": 6,
+      "sizeInTable": "M48",
+      "dogBreed": 11
+    },
+    {
       "L1Min": 32,
       "L1Max": 36,
       "L2Min": 54,
@@ -221,6 +232,17 @@
       "dogBreed": 4
     },
     {
+      "L1Min": 32,
+      "L1Max": 36,
+      "L2Min": 52,
+      "L2Max": 63,
+      "L3Min": 50,
+      "L3Max": 54,
+      "name": 6,
+      "sizeInTable": "M52",
+      "dogBreed": 11
+    },
+    {
       "L1Min": 36,
       "L1Max": 38,
       "L2Min": 60,
@@ -245,6 +267,17 @@
     {
       "L1Min": 36,
       "L1Max": 38,
+      "L2Min": 60,
+      "L2Max": 65,
+      "L3Min": 56,
+      "L3Max": 60,
+      "name": 6,
+      "sizeInTable": "M58",
+      "dogBreed": 11
+    },
+    {
+      "L1Min": 36,
+      "L1Max": 38,
       "L2Min": 71,
       "L2Max": 74,
       "L3Min": 60,
@@ -263,6 +296,17 @@
       "name": 10,
       "sizeInTable": "L62",
       "dogBreed": 6
+    },
+    {
+      "L1Min": 36,
+      "L1Max": 38,
+      "L2Min": 71,
+      "L2Max": 74,
+      "L3Min": 60,
+      "L3Max": 64,
+      "name": 10,
+      "sizeInTable": "L62",
+      "dogBreed": 14
     },
     {
       "L1Min": 36,
@@ -295,7 +339,29 @@
       "L3Max": 70,
       "name": 10,
       "sizeInTable": "L68",
+      "dogBreed": 12
+    },
+    {
+      "L1Min": 36,
+      "L1Max": 40,
+      "L2Min": 74,
+      "L2Max": 78,
+      "L3Min": 64,
+      "L3Max": 70,
+      "name": 10,
+      "sizeInTable": "L68",
       "dogBreed": 6
+    },
+    {
+      "L1Min": 36,
+      "L1Max": 40,
+      "L2Min": 74,
+      "L2Max": 78,
+      "L3Min": 64,
+      "L3Max": 70,
+      "name": 10,
+      "sizeInTable": "L68",
+      "dogBreed": 14
     },
     {
       "L1Min": 36,
@@ -328,7 +394,29 @@
       "L3Max": 73,
       "name": 10,
       "sizeInTable": "L72",
+      "dogBreed": 12
+    },
+    {
+      "L1Min": 36,
+      "L1Max": 40,
+      "L2Min": 78,
+      "L2Max": 82,
+      "L3Min": 70,
+      "L3Max": 73,
+      "name": 10,
+      "sizeInTable": "L72",
       "dogBreed": 6
+    },
+    {
+      "L1Min": 36,
+      "L1Max": 40,
+      "L2Min": 78,
+      "L2Max": 82,
+      "L3Min": 70,
+      "L3Max": 73,
+      "name": 10,
+      "sizeInTable": "L72",
+      "dogBreed": 14
     },
     {
       "L1Min": 36,
@@ -351,6 +439,17 @@
       "name": 11,
       "sizeInTable": "XL80",
       "dogBreed": 5
+    },
+    {
+      "L1Min": 36,
+      "L1Max": 40,
+      "L2Min": 82,
+      "L2Max": 85,
+      "L3Min": 74,
+      "L3Max": 82,
+      "name": 11,
+      "sizeInTable": "XL80",
+      "dogBreed": 12
     },
     {
       "L1Min": 36,
@@ -388,6 +487,17 @@
     {
       "L1Min": 40,
       "L1Max": 44,
+      "L2Min": 85,
+      "L2Max": 88,
+      "L3Min": 82,
+      "L3Max": 85,
+      "name": 11,
+      "sizeInTable": "XL85",
+      "dogBreed": 12
+    },
+    {
+      "L1Min": 40,
+      "L1Max": 44,
       "L2Min": 80,
       "L2Max": 85,
       "L3Min": 82,
@@ -419,6 +529,17 @@
       "dogBreed": 10
     },
     {
+      "L1Min": 40,
+      "L1Max": 44,
+      "L2Min": 80,
+      "L2Max": 85,
+      "L3Min": 85,
+      "L3Max": 90,
+      "name": 11,
+      "sizeInTable": "XL90",
+      "dogBreed": 13
+    },
+    {
       "L1Min": 38,
       "L1Max": 42,
       "L2Min": 48,
@@ -427,7 +548,7 @@
       "L3Max": 34,
       "name": 1,
       "sizeInTable": "S32",
-      "dogBreed": 11
+      "dogBreed": 15
     },
     {
       "L1Min": 38,
@@ -438,7 +559,7 @@
       "L3Max": 36,
       "name": 1,
       "sizeInTable": "S32",
-      "dogBreed": 12
+      "dogBreed": 16
     },
     {
       "L1Min": 38,
@@ -449,7 +570,7 @@
       "L3Max": 36,
       "name": 1,
       "sizeInTable": "S32",
-      "dogBreed": 13
+      "dogBreed": 17
     },
     {
       "L1Min": 42,
@@ -460,7 +581,7 @@
       "L3Max": 38,
       "name": 1,
       "sizeInTable": "S36",
-      "dogBreed": 11
+      "dogBreed": 15
     },
     {
       "L1Min": 42,
@@ -471,7 +592,7 @@
       "L3Max": 38,
       "name": 1,
       "sizeInTable": "S36",
-      "dogBreed": 14
+      "dogBreed": 18
     },
     {
       "L1Min": 45,
@@ -482,7 +603,7 @@
       "L3Max": 42,
       "name": 1,
       "sizeInTable": "M40",
-      "dogBreed": 14
+      "dogBreed": 18
     },
     {
       "L1Min": 48,
@@ -493,7 +614,7 @@
       "L3Max": 46,
       "name": 6,
       "sizeInTable": "M40",
-      "dogBreed": 14
+      "dogBreed": 18
     },
     {
       "L1Min": 42,
@@ -504,7 +625,7 @@
       "L3Max": 38,
       "name": 1,
       "sizeInTable": "S36",
-      "dogBreed": 13
+      "dogBreed": 17
     },
     {
       "L1Min": 45,
@@ -515,7 +636,7 @@
       "L3Max": 42,
       "name": 1,
       "sizeInTable": "M40",
-      "dogBreed": 11
+      "dogBreed": 15
     },
     {
       "L1Min": 44,
@@ -526,7 +647,7 @@
       "L3Max": 42,
       "name": 1,
       "sizeInTable": "M40",
-      "dogBreed": 13
+      "dogBreed": 17
     },
     {
       "L1Min": 41,
@@ -537,108 +658,152 @@
       "L3Max": 46,
       "name": 6,
       "sizeInTable": "M40",
-      "dogBreed": 13
-    },
-    {
-      "L1Min": 41,
-      "L1Max": 42,
-      "L2Min": 60,
-      "L2Max": 65,
-      "L3Min": 40,
-      "L3Max": 44,
-      "name": 10,
-      "sizeInTable": "L44",
-      "dogBreed": 15
-    },
-    {
-      "L1Min": 41,
-      "L1Max": 42,
-      "L2Min": 60,
-      "L2Max": 65,
-      "L3Min": 40,
-      "L3Max": 44,
-      "name": 10,
-      "sizeInTable": "L44",
-      "dogBreed": 16
-    },
-    {
-      "L1Min": 49,
-      "L1Max": 50,
-      "L2Min": 68,
-      "L2Max": 72,
-      "L3Min": 44,
-      "L3Max": 48,
-      "name": 10,
-      "sizeInTable": "L46",
-      "dogBreed": 15
-    },
-    {
-      "L1Min": 49,
-      "L1Max": 50,
-      "L2Min": 68,
-      "L2Max": 72,
-      "L3Min": 44,
-      "L3Max": 48,
-      "name": 10,
-      "sizeInTable": "L46",
-      "dogBreed": 16
-    },
-    {
-      "L1Min": 49,
-      "L1Max": 50,
-      "L2Min": 70,
-      "L2Max": 75,
-      "L3Min": 48,
-      "L3Max": 54,
-      "name": 10,
-      "sizeInTable": "L50",
-      "dogBreed": 15
-    },
-    {
-      "L1Min": 49,
-      "L1Max": 50,
-      "L2Min": 70,
-      "L2Max": 75,
-      "L3Min": 48,
-      "L3Max": 54,
-      "name": 10,
-      "sizeInTable": "L50",
-      "dogBreed": 16
-    },
-    {
-      "L1Min": 27,
-      "L1Max": 31,
-      "L2Min": 41,
-      "L2Max": 46,
-      "L3Min": 31,
-      "L3Max": 32,
-      "name": 1,
-      "sizeInTable": "S32",
       "dogBreed": 17
     },
     {
-      "L1Min": 27,
-      "L1Max": 31,
-      "L2Min": 41,
-      "L2Max": 46,
-      "L3Min": 31,
-      "L3Max": 32,
-      "name": 1,
-      "sizeInTable": "S32",
-      "dogBreed": 18
-    },
-    {
-      "L1Min": 27,
-      "L1Max": 31,
-      "L2Min": 41,
-      "L2Max": 46,
-      "L3Min": 31,
-      "L3Max": 32,
-      "name": 1,
-      "sizeInTable": "S32",
+      "L1Min": 41,
+      "L1Max": 42,
+      "L2Min": 60,
+      "L2Max": 65,
+      "L3Min": 40,
+      "L3Max": 44,
+      "name": 10,
+      "sizeInTable": "L44",
       "dogBreed": 19
     },
     {
+      "L1Min": 41,
+      "L1Max": 42,
+      "L2Min": 60,
+      "L2Max": 65,
+      "L3Min": 40,
+      "L3Max": 44,
+      "name": 10,
+      "sizeInTable": "L44",
+      "dogBreed": 20
+    },
+    {
+      "L1Min": 42,
+      "L1Max": 47,
+      "L2Min": 85,
+      "L2Max": 95,
+      "L3Min": 65,
+      "L3Max": 70,
+      "name": 10,
+      "sizeInTable": "L44",
+      "dogBreed": 21
+    },
+    {
+      "L1Min": 45,
+      "L1Max": 50,
+      "L2Min": 95,
+      "L2Max": 100,
+      "L3Min": 70,
+      "L3Max": 75,
+      "name": 11,
+      "sizeInTable": "XL",
+      "dogBreed": 21
+    },
+    {
+      "L1Min": 50,
+      "L1Max": 60,
+      "L2Min": 100,
+      "L2Max": 120,
+      "L3Min": 75,
+      "L3Max": 85,
+      "name": 12,
+      "sizeInTable": "XXL",
+      "dogBreed": 21
+    },
+    {
+      "L1Min": 40,
+      "L1Max": 43,
+      "L2Min": 60,
+      "L2Max": 67,
+      "L3Min": 42,
+      "L3Max": 46,
+      "name": 13,
+      "sizeInTable": "XXXL",
+      "dogBreed": 22
+    },
+    {
+      "L1Min": 44,
+      "L1Max": 47,
+      "L2Min": 68,
+      "L2Max": 72,
+      "L3Min": 47,
+      "L3Max": 51,
+      "name": 14,
+      "sizeInTable": "XXXXL",
+      "dogBreed": 23
+    },
+    {
+      "L1Min": 48,
+      "L1Max": 51,
+      "L2Min": 73,
+      "L2Max": 76,
+      "L3Min": 52,
+      "L3Max": 56,
+      "name": 15,
+      "sizeInTable": "XXXXXL",
+      "dogBreed": 23
+    },
+    {
+      "L1Min": 52,
+      "L1Max": 55,
+      "L2Min": 80,
+      "L2Max": 86,
+      "L3Min": 57,
+      "L3Max": 61,
+      "name": 16,
+      "sizeInTable": "XXXXXXL",
+      "dogBreed": 23
+    },
+    {
+      "L1Min": 49,
+      "L1Max": 50,
+      "L2Min": 68,
+      "L2Max": 72,
+      "L3Min": 44,
+      "L3Max": 48,
+      "name": 10,
+      "sizeInTable": "L46",
+      "dogBreed": 19
+    },
+    {
+      "L1Min": 49,
+      "L1Max": 50,
+      "L2Min": 68,
+      "L2Max": 72,
+      "L3Min": 44,
+      "L3Max": 48,
+      "name": 10,
+      "sizeInTable": "L46",
+      "dogBreed": 20
+    },
+    {
+      "L1Min": 49,
+      "L1Max": 50,
+      "L2Min": 70,
+      "L2Max": 75,
+      "L3Min": 48,
+      "L3Max": 54,
+      "name": 10,
+      "sizeInTable": "L50",
+      "dogBreed": 19
+    },
+    {
+      "L1Min": 49,
+      "L1Max": 50,
+      "L2Min": 70,
+      "L2Max": 75,
+      "L3Min": 48,
+      "L3Max": 54,
+      "name": 10,
+      "sizeInTable": "L50",
+      "dogBreed": 20
+    },
+    {
       "L1Min": 27,
       "L1Max": 31,
       "L2Min": 41,
@@ -647,106 +812,117 @@
       "L3Max": 32,
       "name": 1,
       "sizeInTable": "S32",
-      "dogBreed": 20
-    },
-    {
-      "L1Min": 29,
-      "L1Max": 37,
-      "L2Min": 42,
-      "L2Max": 48,
-      "L3Min": 35,
-      "L3Max": 36,
-      "name": 6,
-      "sizeInTable": "M36",
-      "dogBreed": 21
-    },
-    {
-      "L1Min": 29,
-      "L1Max": 37,
-      "L2Min": 42,
-      "L2Max": 48,
-      "L3Min": 35,
-      "L3Max": 36,
-      "name": 6,
-      "sizeInTable": "M36",
-      "dogBreed": 22
-    },
-    {
-      "L1Min": 29,
-      "L1Max": 37,
-      "L2Min": 42,
-      "L2Max": 48,
-      "L3Min": 35,
-      "L3Max": 36,
-      "name": 6,
-      "sizeInTable": "M36",
-      "dogBreed": 23
-    },
-    {
-      "L1Min": 32,
-      "L1Max": 38,
-      "L2Min": 47,
-      "L2Max": 54,
-      "L3Min": 41,
-      "L3Max": 42,
-      "name": 10,
-      "sizeInTable": "L42",
       "dogBreed": 24
     },
     {
-      "L1Min": 32,
-      "L1Max": 38,
-      "L2Min": 47,
-      "L2Max": 54,
-      "L3Min": 41,
-      "L3Max": 42,
-      "name": 10,
-      "sizeInTable": "L42",
+      "L1Min": 27,
+      "L1Max": 31,
+      "L2Min": 41,
+      "L2Max": 46,
+      "L3Min": 31,
+      "L3Max": 32,
+      "name": 1,
+      "sizeInTable": "S32",
       "dogBreed": 25
     },
     {
-      "L1Min": 38,
-      "L1Max": 40,
-      "L2Min": 58,
-      "L2Max": 68,
-      "L3Min": 47,
-      "L3Max": 48,
-      "name": 10,
-      "sizeInTable": "L48",
-      "dogBreed": 24
-    },
-    {
-      "L1Min": 38,
-      "L1Max": 40,
-      "L2Min": 58,
-      "L2Max": 68,
-      "L3Min": 47,
-      "L3Max": 48,
-      "name": 10,
-      "sizeInTable": "L48",
-      "dogBreed": 25
-    },
-    {
-      "L1Min": 42,
-      "L1Max": 46,
-      "L2Min": 71,
-      "L2Max": 73,
-      "L3Min": 51,
-      "L3Max": 54,
-      "name": 11,
-      "sizeInTable": "L52",
+      "L1Min": 27,
+      "L1Max": 31,
+      "L2Min": 41,
+      "L2Max": 46,
+      "L3Min": 31,
+      "L3Max": 32,
+      "name": 1,
+      "sizeInTable": "S32",
       "dogBreed": 26
     },
     {
-      "L1Min": 42,
-      "L1Max": 46,
-      "L2Min": 71,
-      "L2Max": 73,
-      "L3Min": 51,
-      "L3Max": 54,
-      "name": 11,
-      "sizeInTable": "L52",
+      "L1Min": 27,
+      "L1Max": 31,
+      "L2Min": 41,
+      "L2Max": 46,
+      "L3Min": 31,
+      "L3Max": 32,
+      "name": 1,
+      "sizeInTable": "S32",
       "dogBreed": 27
+    },
+    {
+      "L1Min": 29,
+      "L1Max": 37,
+      "L2Min": 42,
+      "L2Max": 48,
+      "L3Min": 35,
+      "L3Max": 36,
+      "name": 6,
+      "sizeInTable": "M36",
+      "dogBreed": 28
+    },
+    {
+      "L1Min": 29,
+      "L1Max": 37,
+      "L2Min": 42,
+      "L2Max": 48,
+      "L3Min": 35,
+      "L3Max": 36,
+      "name": 6,
+      "sizeInTable": "M36",
+      "dogBreed": 29
+    },
+    {
+      "L1Min": 29,
+      "L1Max": 37,
+      "L2Min": 42,
+      "L2Max": 48,
+      "L3Min": 35,
+      "L3Max": 36,
+      "name": 6,
+      "sizeInTable": "M36",
+      "dogBreed": 30
+    },
+    {
+      "L1Min": 32,
+      "L1Max": 38,
+      "L2Min": 47,
+      "L2Max": 54,
+      "L3Min": 41,
+      "L3Max": 42,
+      "name": 10,
+      "sizeInTable": "L42",
+      "dogBreed": 31
+    },
+    {
+      "L1Min": 32,
+      "L1Max": 38,
+      "L2Min": 47,
+      "L2Max": 54,
+      "L3Min": 41,
+      "L3Max": 42,
+      "name": 10,
+      "sizeInTable": "L42",
+      "dogBreed": 32
+    },
+    {
+      "L1Min": 38,
+      "L1Max": 40,
+      "L2Min": 58,
+      "L2Max": 68,
+      "L3Min": 47,
+      "L3Max": 48,
+      "name": 10,
+      "sizeInTable": "L48",
+      "dogBreed": 31
+    },
+    {
+      "L1Min": 38,
+      "L1Max": 40,
+      "L2Min": 58,
+      "L2Max": 68,
+      "L3Min": 47,
+      "L3Max": 48,
+      "name": 10,
+      "sizeInTable": "L48",
+      "dogBreed": 32
     },
     {
       "L1Min": 42,
@@ -757,7 +933,29 @@
       "L3Max": 54,
       "name": 11,
       "sizeInTable": "L52",
-      "dogBreed": 28
+      "dogBreed": 33
+    },
+    {
+      "L1Min": 42,
+      "L1Max": 46,
+      "L2Min": 71,
+      "L2Max": 73,
+      "L3Min": 51,
+      "L3Max": 54,
+      "name": 11,
+      "sizeInTable": "L52",
+      "dogBreed": 34
+    },
+    {
+      "L1Min": 42,
+      "L1Max": 46,
+      "L2Min": 71,
+      "L2Max": 73,
+      "L3Min": 51,
+      "L3Max": 54,
+      "name": 11,
+      "sizeInTable": "L52",
+      "dogBreed": 35
     },
     {
       "L1Min": 46,
@@ -768,7 +966,7 @@
       "L3Max": 58,
       "name": 11,
       "sizeInTable": "XL56",
-      "dogBreed": 29
+      "dogBreed": 36
     },
     {
       "L1Min": 51,
@@ -779,7 +977,205 @@
       "L3Max": 86,
       "name": 11,
       "sizeInTable": "XL84",
-      "dogBreed": 30
+      "dogBreed": 37
+    },
+    {
+      "L1Min": 20,
+      "L1Max": 23,
+      "L2Min": 30,
+      "L2Max": 35,
+      "L3Min": 21,
+      "L3Max": 24,
+      "name": 1,
+      "sizeInTable": "S",
+      "dogBreed": 38
+    },
+    {
+      "L1Min": 23,
+      "L1Max": 28,
+      "L2Min": 35,
+      "L2Max": 41,
+      "L3Min": 24,
+      "L3Max": 29,
+      "name": 6,
+      "sizeInTable": "M",
+      "dogBreed": 38
+    },
+    {
+      "L1Min": 28,
+      "L1Max": 31.5,
+      "L2Min": 41,
+      "L2Max": 46,
+      "L3Min": 29,
+      "L3Max": 33.5,
+      "name": 10,
+      "sizeInTable": "L",
+      "dogBreed": 38
+    },
+    {
+      "L1Min": 31.5,
+      "L1Max": 35,
+      "L2Min": 47,
+      "L2Max": 50,
+      "L3Min": 33.5,
+      "L3Max": 38,
+      "name": 11,
+      "sizeInTable": "XL",
+      "dogBreed": 38
+    },
+    {
+      "L1Min": 48,
+      "L1Max": 51,
+      "L2Min": 73,
+      "L2Max": 76,
+      "L3Min": 52,
+      "L3Max": 56,
+      "name": 15,
+      "sizeInTable": "XXXXXL",
+      "dogBreed": 39
+    },
+    {
+      "L1Min": 48,
+      "L1Max": 51,
+      "L2Min": 73,
+      "L2Max": 76,
+      "L3Min": 52,
+      "L3Max": 56,
+      "name": 15,
+      "sizeInTable": "XXXXXL",
+      "dogBreed": 41
+    },
+    {
+      "L1Min": 10,
+      "L1Max": 20,
+      "L2Min": 10,
+      "L2Max": 31,
+      "L3Min": 10,
+      "L3Max": 21,
+      "name": 0,
+      "sizeInTable": "XS",
+      "dogBreed": 42
+    },
+    {
+      "L1Min": 20,
+      "L1Max": 23,
+      "L2Min": 30,
+      "L2Max": 35,
+      "L3Min": 21,
+      "L3Max": 24,
+      "name": 1,
+      "sizeInTable": "S",
+      "dogBreed": 42
+    },
+    {
+      "L1Min": 23,
+      "L1Max": 28,
+      "L2Min": 35,
+      "L2Max": 41,
+      "L3Min": 24,
+      "L3Max": 29,
+      "name": 6,
+      "sizeInTable": "M",
+      "dogBreed": 42
+    },
+    {
+      "L1Min": 28,
+      "L1Max": 31.5,
+      "L2Min": 41,
+      "L2Max": 46,
+      "L3Min": 29,
+      "L3Max": 33.5,
+      "name": 10,
+      "sizeInTable": "L",
+      "dogBreed": 42
+    },
+    {
+      "L1Min": 12,
+      "L1Max": 20,
+      "L2Min": 22,
+      "L2Max": 30,
+      "L3Min": 15,
+      "L3Max": 21,
+      "name": 0,
+      "sizeInTable": "XS",
+      "dogBreed": 46
+    },
+    {
+      "L1Min": 20,
+      "L1Max": 23,
+      "L2Min": 30,
+      "L2Max": 35,
+      "L3Min": 21,
+      "L3Max": 24,
+      "name": 1,
+      "sizeInTable": "S",
+      "dogBreed": 46
+    },
+    {
+      "L1Min": 23,
+      "L1Max": 28,
+      "L2Min": 35,
+      "L2Max": 41,
+      "L3Min": 24,
+      "L3Max": 29,
+      "name": 6,
+      "sizeInTable": "M",
+      "dogBreed": 46
+    },
+    {
+      "L1Min": 28,
+      "L1Max": 31.5,
+      "L2Min": 41,
+      "L2Max": 46,
+      "L3Min": 29,
+      "L3Max": 33.5,
+      "name": 10,
+      "sizeInTable": "L",
+      "dogBreed": 46
+    },
+    {
+      "L1Min": 44,
+      "L1Max": 47,
+      "L2Min": 68,
+      "L2Max": 72,
+      "L3Min": 47,
+      "L3Max": 51,
+      "name": 14,
+      "sizeInTable": "XXXXL",
+      "dogBreed": 47
+    },
+    {
+      "L1Min": 19,
+      "L1Max": 21,
+      "L2Min": 54,
+      "L2Max": 58,
+      "L3Min": 37,
+      "L3Max": 41,
+      "name": 0,
+      "sizeInTable": "XS",
+      "dogBreed": 48
+    },
+    {
+      "L1Min": 21,
+      "L1Max": 23,
+      "L2Min": 58,
+      "L2Max": 62,
+      "L3Min": 41,
+      "L3Max": 45,
+      "name": 1,
+      "sizeInTable": "S",
+      "dogBreed": 48
+    },
+    {
+      "L1Min": 23,
+      "L1Max": 25,
+      "L2Min": 62,
+      "L2Max": 67,
+      "L3Min": 45,
+      "L3Max": 49,
+      "name": 14,
+      "sizeInTable": "M",
+      "dogBreed": 48
     }
   ]
 }
